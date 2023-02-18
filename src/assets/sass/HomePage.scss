@@ -1,0 +1,73 @@
+.HomePage{
+    #line1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        stroke-dasharray: 200%;
+        stroke-dashoffset: 200%;
+        transition: stroke-dashoffset 5s;
+        &.active{
+            stroke-dashoffset: 400%;
+        }
+    }
+    #line2{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        stroke-dasharray: 300%;
+        stroke-dashoffset: 300%;
+        transition: stroke-dashoffset 8s;
+        &.active{
+            stroke-dashoffset: 600%;
+        }
+    }
+    #plane1{
+        width: 300px;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    #ntb{
+        position: absolute;
+        right: 0;
+        top: 160px;
+        #ntb_2{
+            transform: translateX(5000px);
+            transition: transform 3s;
+        }
+        #podPoharom_2{
+            stroke-dasharray: 600px;
+            stroke-dashoffset: 600px;
+            transition: stroke-dashoffset 5s;
+        }
+        #predNtb_2, #oneleftdown_2, #twoleftdown_2, #threeleftdown_2,
+        #onelefttop_2, #twolefttop_2,#threelefttop_2,#fourlefttop_2{
+            stroke-dasharray: 300px;
+            stroke-dashoffset: 300px;
+            transition: stroke-dashoffset 5s;
+        }
+        #podPoharom_2 { transition-delay:  .6s; }
+        #predNtb_2{ transition-delay: 1s;}
+        #oneleftdown_2{ transition-delay: 1.4s;}
+        #twoleftdown_2{ transition-delay: 1.8s;}
+        #threeleftdown_2{ transition-delay: 2.2s;}
+        #onelefttop_2{ transition-delay: 2.6s;}
+        #twolefttop_2{ transition-delay: 3s;}
+        #threelefttop_2{ transition-delay: 3.4s;}
+        #fourlefttop_2{ transition-delay: 3.8s;}
+        &.active{
+            #ntb_2{
+                display: block;
+                transform: translateY(0px);
+            }
+            #podPoharom_2, #predNtb_2,#oneleftdown_2, #twoleftdown_2, #threeleftdown_2,
+            #onelefttop_2, #twolefttop_2,#threelefttop_2,#fourlefttop_2{
+                stroke-dashoffset: 0px;
+            }
+        }
+    }
+}

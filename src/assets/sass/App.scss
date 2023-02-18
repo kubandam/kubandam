@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Thinoo-bold';
+    src: url('../fonts/thinoobold.otf');
+}
+@font-face {
+    font-family: 'Thinoo-thin';
+    src: url('../fonts/thinoothin.otf');
+}
+* {
+    font-family: 'Thinoo-thin';
+}
+.fp-watermark a{
+    display: none !important;
+}
+.App{
+    background-color: #0E0B0D;
+    color: #fff;
+}
