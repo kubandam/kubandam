@@ -1,6 +1,4 @@
 import * as React from 'react'
-import $ from 'jquery';
-import 'animate.css';
 import '../assets/sass/HomePage.scss'
 import Line1 from '../assets/svg/Line1'
 import Line2 from '../assets/svg/Line2'
