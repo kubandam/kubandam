@@ -1,0 +1,343 @@
+.Skills{
+    height: 100vh;    
+    overflow-y: hidden;
+    overflow-x: hidden;
+    #line5{
+        z-index: 3;
+        pointer-events: none;
+        position: absolute;
+        top: -100px;
+        left: -350px;
+        stroke-dasharray: 300%;
+        stroke-dashoffset: 300%;
+        transition: stroke-dashoffset 5s;
+        &.active{
+            stroke-dashoffset: 0%;
+        }
+    }
+    @keyframes aboutMeTitleShorterLine2 {
+        0% {width: 80px;}
+        50% {width: 180px;}
+        100% {width: 80px;}
+    }
+    @keyframes aboutMeTitleLongerLine2 {
+        0% {width: 160px;}
+        50% {width: 255px;}
+        100% {width: 160px;}
+    }
+    .container{
+        width: auto;
+        margin: 150px 160px 0  160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: normal;
+        .leftSide{
+            .title.active{
+                h1{ transform: translateX(0); }
+                .blockTitle{
+                    width: 0;
+                }
+                .underTitle{
+                    span.topLine{
+                        animation: aboutMeTitleLongerLine2 8s infinite;
+                        animation-delay: 1s;
+                    }
+                    .bottom{
+                        span.bottomLine{
+                            
+                            animation: aboutMeTitleShorterLine2 8s infinite;
+                            animation-delay: 1s;
+                        }
+                        h3{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .title{
+                width: 260px;
+                position: relative;
+                h1{
+                    width: 270px;
+                    height: 37.96px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 52px;
+                    color: #FFFFFF;
+                    transform: translateX(-270px);
+                    transition: transform 1s;
+                    transition-delay: 1s;
+                    z-index: 2;
+                }
+                .blockTitle{
+                    background-color: #0E0B0D;
+                    position: absolute;
+                    left: -270px;
+                    top: 0;
+                    width: 270px;
+                    height: 50px;
+                    z-index: 1;
+                    transition: width 1ms;
+                    transition-delay: 2s;
+                }
+                .underTitle{
+                    span.topLine{
+                        margin-top: 18px;
+                        display: flex;  
+                        width: 0;
+                        height: 4.63px;
+                        background: radial-gradient(88.02% 152.45% at 10.07% 92.65%, rgba(255, 127, 131, 0.5) 0%, rgba(126, 67, 166, 0.5) 47.42%, rgba(87, 70, 165, 0.5) 72.62%, rgba(66, 58, 156, 0.5) 100%);
+                        border-radius: 20px;
+                    }
+                    .bottom{
+                        display: flex;  
+                        align-items: center;
+                        justify-content: space-between;
+                        span.bottomLine{
+                            margin-top: 8px;
+                            display: flex;
+                            width: 0;
+                            height: 4.63px;
+                            background: radial-gradient(88.02% 152.45% at 10.07% 92.65%, rgba(255, 127, 131, 0.5) 0%, rgba(126, 67, 166, 0.5) 47.42%, rgba(87, 70, 165, 0.5) 72.62%, rgba(66, 58, 156, 0.5) 100%);
+                            border-radius: 20px;
+                            transform: rotate(-180deg);
+                        }
+                        h3{
+                            opacity: 0;
+                            transition: opacity 1s;
+                            transition-delay: 2s;
+                            margin-top: 8px;
+                            width: 71px;
+                            height: 11.11px;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 14px;
+                            line-height: 15px;
+                            color: #D9D9D9;
+                        }
+                    }
+                }
+            }
+        }
+        @keyframes TableCode1 {
+            0%{fill:#190128;}
+            40%{fill:#B48DB8;}
+            60%{fill:#FB7D5D;}
+            100%{fill:#190128;}
+        }
+        @keyframes TableCode2 {
+            0%{fill:#190128;}
+            40%{fill:#B48DB8;}
+            80%{fill: #B48DB8;}
+            100%{fill:#190128;}
+        }
+        @keyframes CubeRotation {
+            from {
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+            to {
+            -ms-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+            }
+        }
+        .rightSide{
+            #table{
+                z-index: 1;
+                width: 100%;
+                @keyframes apple1 {
+                    0%{ fill: #48A050; }
+                    30%{ fill: #A04848; }
+                    60%{ fill: #A04848; }
+                    100%{ fill: #48A050; }
+                }
+                @keyframes apple2 {
+                    0%{ fill: #157D1F; }
+                    30%{ fill: #7D1515; }
+                    60%{ fill: #7D1515; }
+                    100%{ fill: #157D1F; }
+                }
+                @keyframes apple3 {
+                    0%{ fill: #1B8E27; }
+                    30%{ fill: #8E1B1B; }
+                    60%{ fill: #8E1B1B; }
+                    100%{ fill: #1B8E27; }
+                }
+                &.active{
+                    #person{
+                        transform: translateX(0);
+                    }
+                    #Group_13,#Group_12,#kniha{
+                        transform: translateY(0);
+                    }
+                    #PCL,#PCR,#klav{
+                        transform: translate(0,0);
+                    }
+                    path.code{
+                        animation: TableCode2 5s infinite;
+                        animation-delay: 3s;
+                    }
+                    path.code_2{
+                        animation: TableCode1 5s infinite;
+                        animation-delay: 3s;
+                    }
+                    #Group_10,#Group_11{
+                        opacity: 1;
+                        animation: CubeRotation 5s infinite linear;
+                        animation-delay: 3s;
+                    }
+                    #path772{
+                        animation: apple1 7s infinite linear;
+                        animation-delay: 4s;
+                    }
+                    #path770{
+                        animation: apple2 7s infinite linear;
+                        animation-delay: 4s;
+                    }
+                    #path768{
+                        animation: apple3 7s infinite linear;
+                        animation-delay: 4s;
+                    }
+                    @keyframes float {
+                        0% {
+                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                            transform: translatey(0px);
+                        }
+                        50% {
+                            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+                            transform: translatey(-20px);
+                        }
+                        100% {
+                            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                            transform: translatey(0px);
+                        }
+                    }
+                    @function randomDelay() {
+                        $min: 4;
+                        $max: 6;
+                        $rand: random();
+                        $randomNum: $min + floor($rand * (($max - $min) + 1));
+                        @return $randomNum;
+                    }
+                    @keyframes fillColor {
+                        from{ fill: #423A9C; }
+                        to{ fill: #FB7D5D; }
+                    }
+                    @keyframes fillColor2 {
+                        from{ fill: #FFFFFF; fill-opacity: 50%; }
+                        to{ fill: #FFFFFF; fill-opacity: 100%;}
+                    }
+                    #sass_2, #sass, #figma, #CSS, #HTML,
+                    #NODEJS, #jquery, #JS, #vue, #react,
+                    #api,  #mysql, #php, #laravel, #symfony, #git,
+                    #php_4, #php_2, #php_3, #php_5 
+                    {
+                        transform: translateY(0);
+                        path:nth-child(1){
+                            transition: fill 2s;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            path{
+                                fill: #FB7D5D;
+                                animation: fillColor .5s linear;
+                            }
+                            path:nth-child(4){
+                                fill-opacity: 100%;
+                                fill: #FFFFFF;
+                                animation: fillColor2 .5s linear;
+                            }
+                        }
+                    }
+                    #sass_2{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1s; }
+                    #sass{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.1s; }
+                    #figma{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.2s; }
+                    #CSS{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.3s; }
+                    #HTML{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.4s; }
+                    #NODEJS{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.5s; }
+                    #jquery{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.6s; }
+                    #JS{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.7s; }
+                    #vue{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.8s; }
+                    #react{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 1.9s; }
+                    #api{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2s; }
+                    #mysql{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.1s; }
+                    #php{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.2s; }
+                    #laravel{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.3s; }
+                    #symfony{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.4s; }
+                    #git{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.5s; }
+                    #php_4{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.6s; }
+                    #php_2{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.7s; }
+                    #php_3{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.8s; }
+                    #php_5{ animation: float #{randomDelay()}s ease-in-out infinite; animation-delay: 5s;  transition-delay: 2.9s; }
+                    #stol_2, #koberec{
+                        opacity: 1;
+                    }
+                }
+                #klav{
+                    transform: translate(1000px, -1000px);
+                    transition: transform 1s;
+                    transition-delay: 1s;
+                }
+                #PCL{
+                    transform: translate(-1000px, -1000px);
+                    transition: transform 1s;
+                    transition-delay: 1s;
+                }
+                #PCR{
+                    transform: translate(1000px, 1000px);
+                    transition: transform 1s;
+                    transition-delay: 1s;
+                }
+                #stol_2, #koberec{
+                    opacity: 0;
+                    transition: opacity 2s;
+                    transition-delay: 1s;
+                }
+                #Group_10{transform-origin: 60% 47%;}
+                #Group_11{transform-origin: 64.5% 50.8%;}
+                #Group_10,#Group_11{
+                    opacity: 0;
+                    transition: opacity 2s;
+                    transition-delay: 3s;
+                }
+                #person{
+                    transform: translateX(-2000px);
+                    transition: transform 3s;
+                }
+                #Group_13{
+                    transform: translateY(-9000px);
+                    transition: transform 2s;
+                }
+                #Group_12{
+                    transform: translateY(-9000px);
+                    transition: transform 2s;
+                    transition-delay: 1s;
+                } #kniha{
+                    transform: translateY(-9000px);
+                    transition: transform 2s;
+                    transition-delay: 1.5s;
+                }
+                path.code, path.code_2{
+                    fill: transparent;
+                    transition: fill 3s;
+                    transition-delay: 2s;
+                }
+                #sass_2, #sass, #figma, #CSS, #HTML,
+                #NODEJS, #jquery, #JS, #vue, #react,
+                #api,  #mysql, #php, #laravel, #symfony, #git,
+                #php_4, #php_2, #php_3, #php_5 
+                {
+                    transform: translateY(-2000px);
+                    transition: transform 2s;
+                }
+            }
+        }
+    }
+}

@@ -5,10 +5,12 @@ import './assets/sass/App.scss'
 import HomePage from './components/HomePage'
 import AboutmePage from './components/AboutmePage'
 import ReactFullpage from '@fullpage/react-fullpage'
+import SkillsPage from './components/SkillsPage'
 
 
 const App = () => {
   var [aboutmeActive, changeAboutme] = React.useState(false)
+  var [skillsActive, changeSkills] = React.useState(false)
   return (
     <div className="App">
       <ReactFullpage
@@ -16,6 +18,8 @@ const App = () => {
         afterLoad = {(origin, destination, direction) => {
           if(destination.index == 1)
             changeAboutme(aboutmeActive = true)
+          if(destination.index == 2)
+            changeSkills(skillsActive = true)
         }}
         render={(fullpageApi:any) => {
           return (
@@ -25,6 +29,9 @@ const App = () => {
               </div>
               <div className="section">
                 <AboutmePage active={aboutmeActive}/>
+              </div>
+              <div className="section">
+                <SkillsPage active={skillsActive} />
               </div>
             </ReactFullpage.Wrapper>
       );
