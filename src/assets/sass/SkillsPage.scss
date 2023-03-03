@@ -1,3 +1,30 @@
+
+:root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(255, 127, 131, 0.5);
+    --c2: rgba(66, 58, 156, 0.5);
+    --c3: #0E0B0D;
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
 .Skills{
     height: 100vh;    
     overflow-y: hidden;
@@ -26,6 +53,7 @@
         100% {width: 160px;}
     }
     .container{
+        position: relative;
         width: auto;
         margin: 150px 160px 0  160px;
         display: flex;
@@ -149,6 +177,61 @@
             }
         }
         .rightSide{
+            @keyframes borderRotate {
+                100% {
+                    --angle: 420deg;
+                }
+            }
+            .skillBox{
+                .text{
+                    position: relative;
+                    .blockText{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: #0E0B0D;
+                        transition: width 1s;
+                    }
+                }
+            }
+            .skillBox.active{
+                position: absolute;
+                top: 100px;
+                left: 0;
+                width: 300px;
+                padding: 20px;
+                border: 1px solid;
+                border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c3) 0.25turn) 30;
+                animation: borderRotate var(--d) linear infinite forwards;
+                .blockText.active{
+                    width: 0%;
+                }
+                .title{
+                    display: flex;
+                    align-items: center;
+                    a{
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 30px;
+                        line-height: 52px;
+                        color: #FFFFFF;
+                        margin-left: 20px;
+                    }
+                }
+                .text{
+                    position: relative;
+                    .year{
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 52px;
+                        color: #FFFFFF;
+
+                    }
+                }
+            }
             #table{
                 z-index: 1;
                 width: 100%;
